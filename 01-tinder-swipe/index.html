@@ -1,0 +1,129 @@
+<title>100 proyectos js | 01 - Tinder Swipe</title>
+<body>
+  <main>
+    <section>
+      <header>
+        <img src="./image/tinder-logo.webp" alt="Tinder Logo">
+      </header>
+      <div class="cards">
+        <article>
+          <img src="./image/photos/Karen.webp" alt="Karen, Deslumbra con su sonrisa.">
+          <h2>Karen <span>24</span></h2>
+          <div class="choice nope"></div>
+          <div class="choice like"></div>
+        </article>
+        <article>
+          <img src="./image/photos/Laurita.webp" alt="Laura, Impactante con su mirada penetrante.">
+          <h2>Laura <span>25</span></h2>
+          <div class="choice nope"></div>
+          <div class="choice like"></div>
+        </article>
+        <article>
+          <img src="./image/photos/Sam.webp" alt="Sam, Chica gamer adicta a su gatuta Michi.">
+          <h2>Sam <span>28</span></h2>
+          <div class="choice nope"></div>
+          <div class="choice like"></div>
+        </article>
+      </div>
+      <footer>
+        <button arial-label=""></button>
+        <button arial-label=""></button>
+        <button arial-label=""></button>
+        <button arial-label=""></button>
+        <button arial-label=""></button>
+      </footer>
+    </section>
+  </main>
+</body>
+  
+<style>
+  :root{
+    /* --cl1:hsl(249, 69%, 46%); */
+    --cl1:hsl(51, 63%, 64%);
+    --cl2:hsl(27, 63%, 64%);
+    --cl3:hsl(4, 63%, 64%);
+  }
+  *, *::before, *::after{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+  }
+  body{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display:grid;
+    place-content:center;
+    min-height:100vh;
+    overflow:hidden;
+    user-select:none;
+    /* background:hsl(258, 63%, 64%); */
+    background:linear-gradient(to right, var(--cl3), var(--cl2), var(--cl1),var(--cl1), var(--cl2), var(--cl3));
+  }
+  main{
+    background:url('./image/iphone.webp') no-repeat;
+    background-size:contain;
+    width:320px;
+    height:640px;
+    display:flex;
+    filter:drop-shadow(0 0 10px hsla(0, 0%, 0%, 0.3));
+  }
+  section{
+    background-color:hsl(0, 0%, 100%);
+    width:100%;
+    border-radius:33px;
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+    overflow:hidden;
+    position:relative;
+    padding:16px 6px;
+    margin:24px;
+  }
+  header{
+    display:flex;
+    justify-content:center;
+
+    & img{
+      width:25px;
+      height:25px;
+    }
+  }
+  footer{
+    display:grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap:12px;
+    padding:0 24px;
+    justify-content:center;
+    align-items:center;
+
+    & button{
+      border-radius:50%;
+      border:1px solid hsl(0, 0%, 80%);
+      height:32px;
+      width:32px;
+    }
+  }
+  .cards{
+    position:relative;
+    width:100%;
+    height:100%;
+    margin:0 auto;
+
+    & article{
+      border-radius:8px;
+      box-shadow:0 0 10px hsla(0, 0%, 0%, 0.3);
+      cursor:grab;
+      overflow:hidden;
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      z-index:2;
+
+      & img{
+        width:100%;
+        height:100%;
+        object-fit:cover;
+      }
+    }
+  }
+</style>
